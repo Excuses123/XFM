@@ -1,11 +1,4 @@
 # -*- coding: utf-8 -*-
-# @Time    : 2018/8/15 10:27
-# @Author  : Lemon_shark
-# @Email   : jiping_cehn@163.com
-# @File    : FM.py
-# @Software: PyCharm Community Edition
-
-# coding:UTF-8
 
 from __future__ import division
 from math import exp
@@ -67,7 +60,7 @@ def SGD_FM(dataMatrix, classLabels, k, iter, early_stop):
     # w = random.randn(n, 1)#其中n是特征的个数
     w = zeros((n, 1))      #一阶特征的系数
     w_0 = 0.
-    v = normalvariate(0, 0.2) * ones((n, k))   #即生成辅助向量，用来训练二阶交叉特征的系数
+    v = normalvariate(0, 0.2) * ones((n, k))
     V_List = [];W0_List = [];W_List = []
     min_loss = m
     best_round = 0

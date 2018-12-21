@@ -14,7 +14,7 @@ if __name__ == '__main__':
     data = [train,test]
     del train,test
 
-    category_features = ['province','carrier','devtype','nnt','advert_id','f_channel']
+    category_features = ['carrier','devtype','nnt','advert_id']#'province','f_channel'
     numeric_features = ['creative_tp_dnf_mean', 'creative_tp_dnf_count', 'creative_tp_dnf_sum',
                        'app_cate_id_mean', 'app_cate_id_count', 'app_cate_id_sum',
                        'f_channel_mean', 'app_id_mean', 'inner_slot_id_mean']

@@ -17,10 +17,11 @@ def preprocessData(data,category_features,numeric_features,label):
     data = concat(data)
     label = data[label].map(lambda x: 1 if x == 1 else -1)  # 取标签并转化为 +1，-1
 
+    numfeatures = data[numeric_features].values
     xgbFeatures = OneHotEncoder().fit_transform(xgbFeatures)
     catfeatures = OneHotEncoder().fit_transform(data[category_features].values)
 
-    Data = sparse.hstack([xgbFeatures, catfeatures]).toarray()
+    Data = sparse.hstack([xgbFeatures, catfeatures,numfeatures]).toarray()
 
     return Data[:lenTrain,:],Data[lenTrain:,:],label[:lenTrain],label[lenTrain:]
 

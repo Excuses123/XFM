@@ -26,7 +26,7 @@ if __name__ == '__main__':
     date_startTrain = datetime.now()
 
     print("开始训练")
-    w_0, w, v = SGD_FM(mat(dataTrain), labelTrain, 5, 1000, early_stop = 80)
+    w_0, w, v = SGD_FM(mat(dataTrain), labelTrain, 5, 10000, early_stop = 80)
     date_endTrain = datetime.now()
     print("训练用时为：%s" % (date_endTrain - date_startTrain))
 
